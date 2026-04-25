@@ -1,5 +1,5 @@
 ---
-title: "StartupSocial"
+title: "StartupSocial.net"
 summary: "An invite-only social network built specifically for startup founders, with profiles, feed, connections, direct messaging, and a real auth and admin layer underneath."
 year: 2025
 role: "Solo build · full-stack"
