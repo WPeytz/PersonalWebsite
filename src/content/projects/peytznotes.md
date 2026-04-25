@@ -1,5 +1,5 @@
 ---
-title: "PeytzNotes"
+title: "PeytzNotes.dk"
 summary: "An AI study assistant that turns five years of university notes into a searchable, connected, personalized knowledge base, with semantic search, cited chat, exam summaries, and auto-generated flashcards."
 year: 2026
 role: "Solo build · full-stack & AI"
