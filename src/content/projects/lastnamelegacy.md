@@ -1,5 +1,5 @@
 ---
-title: "LastNameLegacy"
+title: "LastNameLegacy.com"
 summary: "A guess-the-first-name game built around famous surnames, with two modes (historical and living people) and an LLM-assisted scorer that grades each answer against the canonical match."
 year: 2026
 role: "Solo build · full-stack & AI"
