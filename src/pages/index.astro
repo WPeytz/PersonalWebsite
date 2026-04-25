@@ -1,0 +1,70 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '@layouts/BaseLayout.astro';
+import ProjectCard from '@components/ProjectCard.astro';
+import PostCard from '@components/PostCard.astro';
+import { ArrowRight } from '@lucide/astro';
+
+const projects = (await getCollection('projects', ({ data }) => !data.draft))
+  .sort((a, b) => (a.data.order ?? 0) - (b.data.order ?? 0))
+  .slice(0, 4);
+
+const posts = (await getCollection('blog', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, 3);
+---
+
+<BaseLayout>
+  <section class="container-wide py-20 sm:py-28">
+    <div class="max-w-2xl">
+      <h1 class="text-4xl sm:text-5xl font-semibold tracking-tightest leading-[1.05]">
+        Hi, I'm William.
+      </h1>
+      <p class="mt-6 text-lg text-fg-muted leading-relaxed">
+        AI engineer and startup builder based in Copenhagen. I'm pursuing an
+        MSc in Human-Centered AI at DTU and currently cofounding
+        <a href="/projects/stemma" class="text-fg underline decoration-border-strong hover:decoration-accent">Stemma</a>,
+        where we build a Danish-speaking AI phone assistant. I like turning
+        machine learning into things real people actually use.
+      </p>
+    </div>
+  </section>
+
+  {
+    projects.length > 0 && (
+      <section class="container-wide py-12 border-t border-border">
+        <div class="flex items-baseline justify-between gap-4 mb-8">
+          <h2 class="text-xl font-semibold tracking-tightest">Selected projects</h2>
+          <a
+            href="/projects"
+            class="text-sm text-fg-muted hover:text-fg inline-flex items-center gap-1 no-underline"
+          >
+            All projects <ArrowRight class="h-3.5 w-3.5" aria-hidden="true" />
+          </a>
+        </div>
+        <div class="grid gap-4 sm:grid-cols-2">
+          {projects.map((project) => <ProjectCard project={project} />)}
+        </div>
+      </section>
+    )
+  }
+
+  {
+    posts.length > 0 && (
+      <section class="container-wide py-12 border-t border-border">
+        <div class="flex items-baseline justify-between gap-4 mb-4">
+          <h2 class="text-xl font-semibold tracking-tightest">Recent writing</h2>
+          <a
+            href="/blog"
+            class="text-sm text-fg-muted hover:text-fg inline-flex items-center gap-1 no-underline"
+          >
+            All posts <ArrowRight class="h-3.5 w-3.5" aria-hidden="true" />
+          </a>
+        </div>
+        <div class="flex flex-col">
+          {posts.map((post) => <PostCard post={post} />)}
+        </div>
+      </section>
+    )
+  }
+</BaseLayout>

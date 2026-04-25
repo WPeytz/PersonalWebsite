@@ -1,0 +1,91 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import BaseLayout from './BaseLayout.astro';
+import { ArrowUpRight, Code2, Pencil } from '@lucide/astro';
+import { editUrl } from '@/consts';
+
+interface Props {
+  entry: CollectionEntry<'projects'>;
+}
+
+const { entry } = Astro.props;
+const { title, summary, year, role, stack, link, repo, heroImage } = entry.data;
+const editHref = editUrl(`src/content/projects/${entry.id}`);
+---
+
+<BaseLayout title={title} description={summary} image={heroImage} article>
+  <article class="container-content py-16">
+    <header class="mb-10">
+      <p class="text-sm text-fg-subtle font-mono">{year} · {role}</p>
+      <h1 class="mt-3 text-4xl font-semibold tracking-tightest">{title}</h1>
+      <p class="mt-3 text-lg text-fg-muted">{summary}</p>
+
+      {
+        stack.length > 0 && (
+          <ul class="mt-5 flex flex-wrap gap-1.5">
+            {stack.map((tag) => (
+              <li class="text-xs font-mono text-fg-subtle border border-border rounded px-1.5 py-0.5">
+                {tag}
+              </li>
+            ))}
+          </ul>
+        )
+      }
+
+      {
+        (link || repo) && (
+          <div class="mt-6 flex flex-wrap gap-3">
+            {link && (
+              <a
+                href={link}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-1.5 text-sm text-fg hover:text-accent no-underline"
+              >
+                Visit site
+                <ArrowUpRight class="h-4 w-4" aria-hidden="true" />
+              </a>
+            )}
+            {repo && (
+              <a
+                href={repo}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-1.5 text-sm text-fg hover:text-accent no-underline"
+              >
+                <Code2 class="h-4 w-4" aria-hidden="true" />
+                Source
+              </a>
+            )}
+          </div>
+        )
+      }
+    </header>
+
+    {
+      heroImage && (
+        <img
+          src={heroImage}
+          alt=""
+          class="mb-10 w-full rounded-lg border border-border"
+        />
+      )
+    }
+
+    <div class="prose-site">
+      <slot />
+    </div>
+
+    <footer class="mt-12 pt-6 border-t border-border">
+      <a
+        href={editHref}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-1.5 text-sm text-fg-muted hover:text-fg no-underline"
+      >
+        <Pencil class="h-3.5 w-3.5" aria-hidden="true" />
+        Edit this page on GitHub
+      </a>
+    </footer>
+  </article>
+</BaseLayout>

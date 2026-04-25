@@ -1,0 +1,89 @@
+@import '@fontsource-variable/geist/index.css';
+@import '@fontsource-variable/geist-mono/index.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-bg: 252 252 252;
+    --color-bg-elevated: 247 247 247;
+    --color-bg-subtle: 240 240 240;
+    --color-fg: 10 10 10;
+    --color-fg-muted: 82 82 82;
+    --color-fg-subtle: 140 140 140;
+    --color-border: 230 230 230;
+    --color-border-strong: 200 200 200;
+    --color-accent: 70 102 220;
+    --color-accent-hover: 96 130 230;
+    color-scheme: light;
+  }
+
+  :root.dark {
+    --color-bg: 10 10 10;
+    --color-bg-elevated: 17 17 17;
+    --color-bg-subtle: 22 22 22;
+    --color-fg: 237 237 237;
+    --color-fg-muted: 161 161 161;
+    --color-fg-subtle: 107 107 107;
+    --color-border: 31 31 31;
+    --color-border-strong: 42 42 42;
+    --color-accent: 124 158 255;
+    --color-accent-hover: 161 184 255;
+    color-scheme: dark;
+  }
+
+  html {
+    @apply bg-bg text-fg font-sans antialiased;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    @apply min-h-screen flex flex-col;
+  }
+
+  ::selection {
+    @apply bg-accent/30 text-fg;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-sans tracking-tightest;
+  }
+
+  a {
+    @apply text-fg underline-offset-4 decoration-border-strong hover:decoration-accent transition-colors;
+  }
+
+  code {
+    @apply font-mono text-[0.9em];
+  }
+}
+
+@layer components {
+  .prose-site {
+    @apply prose dark:prose-invert max-w-none
+      prose-headings:font-sans prose-headings:tracking-tightest
+      prose-h1:text-4xl prose-h1:mb-6
+      prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-4
+      prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3
+      prose-p:text-fg prose-p:leading-relaxed
+      prose-a:text-fg prose-a:underline prose-a:decoration-border-strong hover:prose-a:decoration-accent
+      prose-strong:text-fg
+      prose-code:text-fg prose-code:bg-bg-subtle prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:before:content-none prose-code:after:content-none
+      prose-pre:bg-bg-subtle prose-pre:border prose-pre:border-border
+      prose-blockquote:border-l-accent prose-blockquote:text-fg-muted prose-blockquote:not-italic
+      prose-hr:border-border
+      prose-li:text-fg prose-li:marker:text-fg-subtle
+      prose-img:rounded-lg prose-img:border prose-img:border-border;
+  }
+
+  .container-wide {
+    @apply mx-auto w-full max-w-wide px-6;
+  }
+
+  .container-content {
+    @apply mx-auto w-full max-w-content px-6;
+  }
+}

@@ -1,0 +1,15 @@
+---
+import SocialLinks from './SocialLinks.astro';
+import { AUTHOR } from '@/consts';
+
+const year = new Date().getFullYear();
+---
+
+<footer class="mt-24 border-t border-border">
+  <div class="container-wide py-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+    <p class="text-sm text-fg-muted">
+      © {year} {AUTHOR}
+    </p>
+    <SocialLinks />
+  </div>
+</footer>
