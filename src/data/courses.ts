@@ -97,7 +97,7 @@ export const COURSES: Course[] = [
     institution: 'University of Copenhagen',
   },
    {
-      title: 'Mathematics A',
+      title: 'Economics: Mathematics A',
       year: 2024,
       ects: 10,
       program: 'other',
@@ -125,7 +125,7 @@ export const COURSES: Course[] = [
     institution: 'University of Copenhagen',
   },
   {
-    title: 'Mathematics B',
+    title: 'Economics: Mathematics B',
     year: 2025,
     ects: 7.5,
     program: 'other',
