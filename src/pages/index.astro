@@ -16,17 +16,28 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
 
 <BaseLayout>
   <section class="container-wide py-20 sm:py-28">
-    <div class="max-w-2xl">
-      <h1 class="text-4xl sm:text-5xl font-semibold tracking-tightest leading-[1.05]">
-        Hi, I'm William.
-      </h1>
-      <p class="mt-6 text-lg text-fg-muted leading-relaxed">
-        AI engineer and startup builder based in Copenhagen. I'm pursuing an
-        MSc in Human-Centered AI at DTU and currently cofounding
-        <a href="/projects/stemma" class="text-fg underline decoration-border-strong hover:decoration-accent">Stemma</a>,
-        where we build a Danish-speaking AI phone assistant. I like turning
-        machine learning into things real people actually use.
-      </p>
+    <div class="flex flex-col-reverse gap-10 sm:flex-row sm:items-center sm:gap-12">
+      <div class="max-w-2xl">
+        <h1 class="text-4xl sm:text-5xl font-semibold tracking-tightest leading-[1.05]">
+          Hi, I'm William.
+        </h1>
+        <p class="mt-6 text-lg text-fg-muted leading-relaxed">
+          AI engineer and startup builder based in Copenhagen. I'm pursuing an
+          MSc in Human-Centered AI at DTU and currently cofounding
+          <a href="/projects/stemma" class="text-fg underline decoration-border-strong hover:decoration-accent">Stemma</a>,
+          where we build a Danish-speaking AI phone assistant. I like turning
+          machine learning into things real people actually use.
+        </p>
+      </div>
+      <div class="flex-shrink-0">
+        <img
+          src="/portrait.jpg"
+          alt="Portrait of William Peytz"
+          width="240"
+          height="240"
+          class="h-48 w-48 sm:h-56 sm:w-56 rounded-lg object-cover border border-border-strong"
+        />
+      </div>
     </div>
   </section>
 
