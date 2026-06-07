@@ -4,7 +4,7 @@ summary: Oak is an iOS personal finance app that transforms spending data into a
 year: 2026
 role: Fullstack Engineer
 stack:
-  - Swift, SwiftUI, SceneKit, Core Haptics, CSV-based transaction processing, MVVM, Xcode.
+  - Swift, SwiftUI, CSV-based transaction processing, Xcode.
 link: https://www.oakapp.dk/
 repo: https://github.com/WPeytz/Oak
 heroImage: ''
