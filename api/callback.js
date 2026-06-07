@@ -28,22 +28,33 @@ function page({ state, content, heading, detail }) {
       return;
     }
 
+    var done = false;
     window.addEventListener('message', function (e) {
       if (e.data === 'authorizing:github') {
+        // Standard handshake reply (reply to the exact origin that pinged us).
         window.opener.postMessage(message, e.origin);
+        done = true;
         setStatus('Handshake received — finishing…');
       }
     });
 
-    // Ping the opener repeatedly until it echoes back (handles late listener).
+    // Drive the handshake AND post the result directly. The direct post covers
+    // the case where the opener's reference to this popup was severed (so its
+    // echo never arrives) — its message listener still receives our result and
+    // validates our sender origin. targetOrigin '*' only reaches window.opener.
     var tries = 0;
     var timer = setInterval(function () {
       tries++;
-      try { window.opener.postMessage('authorizing:github', '*'); } catch (_) {}
+      try {
+        window.opener.postMessage('authorizing:github', '*');
+        window.opener.postMessage(message, '*');
+      } catch (_) {}
       setStatus('Connecting to editor… (' + tries + ')');
-      if (tries >= 40) { // ~10s
+      if (done || tries >= 40) { // ~10s
         clearInterval(timer);
-        setStatus('No response from editor window. Close this and use "Sign In Using Access Token".');
+        if (!done) {
+          setStatus('No response from editor window. Close this and use "Sign In Using Access Token".');
+        }
       }
     }, 250);
   })();
