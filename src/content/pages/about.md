@@ -17,7 +17,7 @@ platforms, voice agents, anomaly detection pipelines.
 
 ## Previously
 
-- Cofounded [**Stemma**](/projects/stemma) — a Danish-speaking AI phone
+- Cofounded [**Stemma**](/projects/stemma) (2026) — a Danish-speaking AI phone
   assistant for inbound calls (scheduling, bookings, sales). I designed and
   deployed the real-time ASR → LLM → TTS voice pipeline and we're running pilots
   with live customers.
