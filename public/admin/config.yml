@@ -61,6 +61,21 @@ collections:
       - { name: draft, label: Draft (hide from site), widget: boolean, default: false, required: false }
       - { name: body, label: Case study, widget: markdown }
 
+  - name: pages
+    label: Pages
+    folder: src/content/pages
+    create: false
+    delete: false
+    extension: md
+    format: frontmatter
+    summary: "{{title}}"
+    fields:
+      - { name: title, label: Page title, widget: string }
+      - { name: description, label: SEO description, widget: string }
+      - { name: intro, label: Intro paragraph (shown next to the portrait), widget: text }
+      - { name: portrait, label: Portrait image, widget: image, required: false }
+      - { name: body, label: Body, widget: markdown }
+
   - name: data
     label: Site data
     files:

@@ -1,88 +1,37 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro';
+import { getEntry } from 'astro:content';
+
+// Content is editable from the CMS (Pages → About).
+const about = await getEntry('pages', 'about');
+const { Content } = await about.render();
+const { title, description, intro, portrait } = about.data;
 ---
 
-<BaseLayout
-  title="About"
-  description="About William Peytz — AI engineer, startup builder, and MSc Human-Centered AI student at DTU."
->
+<BaseLayout title={title} description={description}>
   <section class="container-content py-16">
     <div class="flex flex-col-reverse gap-8 sm:flex-row sm:items-start sm:gap-10">
       <div class="flex-1 min-w-0">
-        <h1 class="text-4xl font-semibold tracking-tightest">About</h1>
-        <p class="mt-6 text-lg text-fg-muted leading-relaxed">
-          I'm an AI engineer and startup builder based in Copenhagen. I'm
-          currently doing my MSc in Human-Centered AI at the Technical
-          University of Denmark, where my coursework has taken me through
-          deep learning, computer vision, computer graphics, and X-Tech
-          entrepreneurship.
-        </p>
+        <h1 class="text-4xl font-semibold tracking-tightest">{title}</h1>
+        <p class="mt-6 text-lg text-fg-muted leading-relaxed">{intro}</p>
       </div>
-      <div class="flex-shrink-0">
-        <img
-          src="/portrait.jpg"
-          alt="Portrait of William Peytz"
-          width="176"
-          height="176"
-          class="h-40 w-40 sm:h-44 sm:w-44 rounded-lg object-cover border border-border-strong"
-        />
-      </div>
+      {
+        portrait && (
+          <div class="flex-shrink-0">
+            <img
+              src={portrait}
+              alt="Portrait of William Peytz"
+              width="176"
+              height="176"
+              class="h-40 w-40 sm:h-44 sm:w-44 rounded-lg object-cover border border-border-strong"
+            />
+          </div>
+        )
+      }
     </div>
 
     <div class="prose-site mt-10">
-      <p>
-        What I care about is the gap between an interesting model and a
-        product someone actually wants to use. That's pulled me toward
-        rapid prototyping, full-stack development, and shipping AI systems
-        with real users — adaptive learning platforms, voice agents,
-        anomaly detection pipelines.
-      </p>
-
-      <h2>Currently</h2>
-      <ul>
-        <li>
-          Cofounding <strong><a href="/projects/stemma">Stemma</a></strong> — a Danish-speaking AI phone
-          assistant for inbound calls (scheduling, bookings, sales). I
-          designed and deployed the real-time ASR → LLM → TTS voice
-          pipeline and we're running pilots with live customers.
-        </li>
-        <li>
-          Studying at DTU — Deep Learning, Computer Vision, Computer
-          Graphics, X-Tech Entrepreneurship.
-        </li>
-      </ul>
-
-      <h2>Previously</h2>
-      <ul>
-        <li>
-          Cofounded <strong><a href="/projects/simbolic">Simbolic</a></strong> (2025–2026) — infrastructure
-          for orchestrating engineering simulations across tools.
-        </li>
-        <li>
-          BSc in Artificial Intelligence and Data at DTU. Thesis on
-          adaptive learning systems, which became <a href="/projects/eloquiz">EloQuiz.dk</a>.
-        </li>
-        <li>
-          Math tutor at Toptutors. IT &amp; legal assistant at Mette
-          Klingsten Law Firm, where I automated CRM and document workflows.
-        </li>
-      </ul>
-
-      <h2>Toolkit</h2>
-      <p>
-        Mostly Python (PyTorch, Flask, FastAPI, scikit-learn) and
-        TypeScript/JavaScript (Vue, React). Comfortable with Docker,
-        Firebase, Supabase, and shipping on Vercel. I work with LLMs,
-        voice pipelines, and the OpenAI API daily.
-      </p>
-
-      <h2>Get in touch</h2>
-      <p>
-        The fastest way to reach me is by{' '}
-        <a href="mailto:williamhkp@gmail.com">email</a>. You can also find me
-        on <a href="https://github.com/WPeytz" target="_blank" rel="noopener noreferrer">GitHub</a>
-        and <a href="https://www.linkedin.com/in/William-Peytz/" target="_blank" rel="noopener noreferrer">LinkedIn</a>.
-      </p>
+      <Content />
     </div>
   </section>
 </BaseLayout>
