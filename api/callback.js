@@ -1,9 +1,8 @@
 // Step 2 of the GitHub OAuth flow for the CMS (/admin).
 // Exchanges the ?code for an access token, then hands it back to the CMS
 // window via postMessage using the Decap/Sveltia handshake protocol.
-// Handshake mirrors the reference implementation (sveltia-cms-auth):
-// post 'authorizing:github', then reply to the CMS's echo with the result.
-// We do NOT close the popup ourselves — Sveltia closes it on success.
+// We retry the initial 'authorizing:github' ping (in case the opener's
+// listener attaches late) and let Sveltia close the popup on success.
 
 function page({ state, content, heading, detail }) {
   const ok = state === 'success';
@@ -11,27 +10,50 @@ function page({ state, content, heading, detail }) {
 <style>
   body { font: 15px/1.5 system-ui, sans-serif; background:#0a0a0a; color:#ededed;
          display:flex; align-items:center; justify-content:center; height:100vh; margin:0; }
-  .card { max-width: 360px; padding: 24px; text-align:center; }
+  .card { max-width: 380px; padding: 24px; text-align:center; }
   h1 { font-size: 17px; margin: 0 0 8px; color: ${ok ? '#4ade80' : '#f87171'}; }
   p { margin: 0; color: #a1a1a1; }
+  #status { margin-top: 12px; font-size: 12px; color: #6b7280; }
 </style></head>
-<body><div class="card"><h1>${heading}</h1><p>${detail}</p></div>
+<body><div class="card"><h1>${heading}</h1><p>${detail}</p><p id="status"></p></div>
 <script>
   (function () {
+    var statusEl = document.getElementById('status');
+    function setStatus(t) { statusEl.textContent = t; }
     var content = ${JSON.stringify(content)};
     var message = 'authorization:github:${state}:' + JSON.stringify(content);
+
+    if (!window.opener) {
+      setStatus('No opener window detected — close this and use "Sign In Using Access Token".');
+      return;
+    }
+
     window.addEventListener('message', function (e) {
       if (e.data === 'authorizing:github') {
-        window.opener && window.opener.postMessage(message, e.origin);
+        window.opener.postMessage(message, e.origin);
+        setStatus('Handshake received — finishing…');
       }
     });
-    window.opener && window.opener.postMessage('authorizing:github', '*');
+
+    // Ping the opener repeatedly until it echoes back (handles late listener).
+    var tries = 0;
+    var timer = setInterval(function () {
+      tries++;
+      try { window.opener.postMessage('authorizing:github', '*'); } catch (_) {}
+      setStatus('Connecting to editor… (' + tries + ')');
+      if (tries >= 40) { // ~10s
+        clearInterval(timer);
+        setStatus('No response from editor window. Close this and use "Sign In Using Access Token".');
+      }
+    }, 250);
   })();
 </script></body></html>`;
 }
 
 export default async function handler(req, res) {
   res.setHeader('Content-Type', 'text/html');
+  // Preserve the window.opener relationship for the postMessage handshake.
+  res.setHeader('Cross-Origin-Opener-Policy', 'unsafe-none');
 
   const clientId = process.env.OAUTH_GITHUB_CLIENT_ID;
   const clientSecret = process.env.OAUTH_GITHUB_CLIENT_SECRET;
@@ -84,7 +106,7 @@ export default async function handler(req, res) {
       state: 'success',
       content: { provider: 'github', token: data.access_token },
       heading: 'Authenticated ✓',
-      detail: 'Signing you in… this window will close automatically.',
+      detail: 'Signing you in…',
     }));
   } catch (err) {
     res.status(500).send(page({
