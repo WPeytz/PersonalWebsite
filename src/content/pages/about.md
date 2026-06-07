@@ -1,11 +1,7 @@
 ---
 title: About
 description: About William Peytz — AI engineer, startup builder, and MSc Human-Centered AI student at DTU.
-intro: >-
-  I'm an AI engineer and startup builder based in Copenhagen. I'm currently doing
-  my MSc in Human-Centered AI at the Technical University of Denmark, where my
-  coursework has taken me through deep learning, computer vision, computer
-  graphics, and X-Tech entrepreneurship.
+intro: I'm an AI engineer and startup builder based in Copenhagen. I'm currently doing my MSc in Human-Centered AI at the Technical University of Denmark.
 portrait: /portrait.jpg
 ---
 
@@ -16,16 +12,16 @@ platforms, voice agents, anomaly detection pipelines.
 
 ## Currently
 
-- Cofounding **[Stemma](/projects/stemma)** — a Danish-speaking AI phone
-  assistant for inbound calls (scheduling, bookings, sales). I designed and
-  deployed the real-time ASR → LLM → TTS voice pipeline and we're running pilots
-  with live customers.
-- Studying at DTU — Deep Learning, Computer Vision, Computer Graphics, X-Tech
-  Entrepreneurship.
+- Studying at DTU — Taking a course on Innovation in Engineering
+- Looking for my next opportunity in AI-engineering and startups
 
 ## Previously
 
-- Cofounded **[Simbolic](/projects/simbolic)** (2025–2026) — infrastructure for
+- Cofounded [**Stemma**](/projects/stemma) — a Danish-speaking AI phone
+  assistant for inbound calls (scheduling, bookings, sales). I designed and
+  deployed the real-time ASR → LLM → TTS voice pipeline and we're running pilots
+  with live customers.
+- Cofounded [**Simbolic**](/projects/simbolic) (2025–2026) — infrastructure for
   orchestrating engineering simulations across tools.
 - BSc in Artificial Intelligence and Data at DTU. Thesis on adaptive learning
   systems, which became [EloQuiz.dk](/projects/eloquiz).
