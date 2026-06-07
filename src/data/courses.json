@@ -14,51 +14,374 @@
     }
   },
   "courses": [
-    { "title": "Deep Learning", "year": 2025, "ects": 5, "program": "msc" },
-    { "title": "Introduction to Deep Learning in Computer Vision", "year": 2025, "ects": 5, "program": "msc" },
-    { "title": "Computer Graphics", "year": 2025, "ects": 5, "program": "msc" },
-    { "title": "X-Tech Entrepreneurship", "year": 2025, "ects": 10, "program": "msc" },
-    { "title": "User Experience Engineering", "year": 2026, "ects": 5, "program": "msc" },
-    { "title": "Quantitative methods to assess sustainability", "year": 2026, "ects": 5, "program": "msc" },
-    { "title": "Personal Data Interaction", "year": 2026, "ects": 10, "program": "msc" },
-    { "title": "Computational Data Analysis", "year": 2026, "ects": 5, "program": "msc" },
-    { "title": "X-Tech+", "year": 2026, "ects": 10, "program": "msc" },
-
-    { "title": "Advanced Engineering Mathematics 1", "year": 2020, "ects": 20, "program": "bsc" },
-    { "title": "Introduction to Programming and Data Processing", "year": 2020, "ects": 5, "program": "bsc" },
-    { "title": "Discrete Mathematics", "year": 2020, "ects": 5, "program": "bsc" },
-    { "title": "Introduction to Intelligent Systems", "year": 2020, "ects": 10, "program": "bsc" },
-    { "title": "Signals and Data", "year": 2021, "ects": 5, "program": "bsc" },
-    { "title": "Artificial Intelligence and Human Cognition", "year": 2021, "ects": 5, "program": "bsc" },
-    { "title": "Algorithms and Data Structures 1", "year": 2021, "ects": 5, "program": "bsc" },
-    { "title": "Introduction to Mathematical Statistics", "year": 2021, "ects": 5, "program": "bsc" },
-    { "title": "Advanced Engineering Mathematics 2", "year": 2021, "ects": 5, "program": "bsc" },
-    { "title": "Introductory Programming", "year": 2021, "ects": 5, "program": "bsc" },
-    { "title": "Introduction to Machine Learning and Data Mining", "year": 2021, "ects": 5, "program": "bsc" },
-    { "title": "Chemistry", "year": 2021, "ects": 5, "program": "bsc" },
-    { "title": "UX Design Prototyping", "year": 2021, "ects": 5, "program": "bsc" },
-    { "title": "Project in Statistical Evaluation for Artificial Intelligence and Data", "year": 2022, "ects": 5, "program": "bsc" },
-    { "title": "Software Engineering 1", "year": 2022, "ects": 5, "program": "bsc" },
-    { "title": "Project work - Bachelor of Artificial Intelligence and Data", "year": 2022, "ects": 10, "program": "bsc" },
-    { "title": "Science, Technology and Society", "year": 2023, "ects": 5, "program": "bsc" },
-    { "title": "Physics 1", "year": 2023, "ects": 10, "program": "bsc" },
-    { "title": "Computational Social Science", "year": 2023, "ects": 5, "program": "bsc" },
-    { "title": "Active Machine Learning and Agency", "year": 2023, "ects": 5, "program": "bsc" },
-    { "title": "Digital Trends for Entrepreneurs", "year": 2023, "ects": 5, "program": "bsc" },
-    { "title": "Algorithms and Data Structures 2", "year": 2023, "ects": 5, "program": "bsc" },
-    { "title": "Machine Learning Operations", "year": 2025, "ects": 5, "program": "bsc" },
-    { "title": "Symbolic Artificial Intelligence", "year": 2025, "ects": 5, "program": "bsc" },
-    { "title": "Introduction to Reinforcement Learning and Control", "year": 2025, "ects": 5, "program": "bsc" },
-    { "title": "Project Management", "year": 2025, "ects": 5, "program": "bsc" },
-    { "title": "Bachelor Thesis: Adaptive Learning Systems for Middle School Mathematics", "year": 2025, "ects": 20, "program": "bsc" },
-
-    { "title": "Principle of Economics A", "year": 2024, "ects": 7.5, "program": "other", "institution": "University of Copenhagen" },
-    { "title": "Descriptive Economics A", "year": 2024, "ects": 7.5, "program": "other", "institution": "University of Copenhagen" },
-    { "title": "Economics in Society", "year": 2024, "ects": 5, "program": "other", "institution": "University of Copenhagen" },
-    { "title": "Economics: Mathematics A", "year": 2024, "ects": 10, "program": "other", "institution": "University of Copenhagen" },
-    { "title": "Principle of Economics B", "year": 2025, "ects": 7.5, "program": "other", "institution": "University of Copenhagen" },
-    { "title": "Descriptive Economics B", "year": 2025, "ects": 7.5, "program": "other", "institution": "University of Copenhagen" },
-    { "title": "Business Economics", "year": 2025, "ects": 7.5, "program": "other", "institution": "University of Copenhagen" },
-    { "title": "Economics: Mathematics B", "year": 2025, "ects": 7.5, "program": "other", "institution": "University of Copenhagen" }
+    {
+      "title": "Deep Learning",
+      "year": 2025,
+      "ects": 5,
+      "program": "msc",
+      "code": "",
+      "description": "",
+      "institution": ""
+    },
+    {
+      "title": "Introduction to Deep Learning in Computer Vision",
+      "year": 2025,
+      "ects": 5,
+      "program": "msc",
+      "code": "",
+      "description": "",
+      "institution": ""
+    },
+    {
+      "title": "Computer Graphics",
+      "year": 2025,
+      "ects": 5,
+      "program": "msc",
+      "code": "",
+      "description": "",
+      "institution": ""
+    },
+    {
+      "title": "X-Tech Entrepreneurship",
+      "year": 2025,
+      "ects": 10,
+      "program": "msc",
+      "code": "",
+      "description": "",
+      "institution": ""
+    },
+    {
+      "title": "User Experience Engineering",
+      "year": 2026,
+      "ects": 5,
+      "program": "msc",
+      "code": "",
+      "description": "",
+      "institution": ""
+    },
+    {
+      "title": "Quantitative methods to assess sustainability",
+      "year": 2026,
+      "ects": 5,
+      "program": "msc",
+      "code": "",
+      "description": "",
+      "institution": ""
+    },
+    {
+      "title": "Personal Data Interaction",
+      "year": 2026,
+      "ects": 10,
+      "program": "msc",
+      "code": "",
+      "description": "",
+      "institution": ""
+    },
+    {
+      "title": "Computational Data Analysis",
+      "year": 2026,
+      "ects": 5,
+      "program": "msc",
+      "code": "",
+      "description": "",
+      "institution": ""
+    },
+    {
+      "title": "X-Tech+",
+      "year": 2026,
+      "ects": 10,
+      "program": "msc",
+      "code": "",
+      "description": "",
+      "institution": ""
+    },
+    {
+      "title": "Advanced Engineering Mathematics 1",
+      "year": 2020,
+      "ects": 20,
+      "program": "bsc",
+      "code": "",
+      "description": "",
+      "institution": ""
+    },
+    {
+      "title": "Introduction to Programming and Data Processing",
+      "year": 2020,
+      "ects": 5,
+      "program": "bsc",
+      "code": "",
+      "description": "",
+      "institution": ""
+    },
+    {
+      "title": "Discrete Mathematics",
+      "year": 2020,
+      "ects": 5,
+      "program": "bsc",
+      "code": "",
+      "description": "",
+      "institution": ""
+    },
+    {
+      "title": "Introduction to Intelligent Systems",
+      "year": 2020,
+      "ects": 10,
+      "program": "bsc"
+    },
+    {
+      "title": "Signals and Data",
+      "year": 2021,
+      "ects": 5,
+      "program": "bsc",
+      "code": "",
+      "description": "",
+      "institution": ""
+    },
+    {
+      "title": "Artificial Intelligence and Human Cognition",
+      "year": 2021,
+      "ects": 5,
+      "program": "bsc",
+      "code": ""
+    },
+    {
+      "title": "Algorithms and Data Structures 1",
+      "year": 2021,
+      "ects": 5,
+      "program": "bsc"
+    },
+    {
+      "title": "Introduction to Mathematical Statistics",
+      "year": 2021,
+      "ects": 5,
+      "program": "bsc"
+    },
+    {
+      "title": "Advanced Engineering Mathematics 2",
+      "year": 2021,
+      "ects": 5,
+      "program": "bsc"
+    },
+    {
+      "title": "Introductory Programming",
+      "year": 2021,
+      "ects": 5,
+      "program": "bsc"
+    },
+    {
+      "title": "Introduction to Machine Learning and Data Mining",
+      "year": 2021,
+      "ects": 5,
+      "program": "bsc"
+    },
+    {
+      "title": "Chemistry",
+      "year": 2021,
+      "ects": 5,
+      "program": "bsc"
+    },
+    {
+      "title": "UX Design Prototyping",
+      "year": 2021,
+      "ects": 5,
+      "program": "bsc",
+      "code": "",
+      "description": "",
+      "institution": ""
+    },
+    {
+      "title": "Project in Statistical Evaluation for Artificial Intelligence and Data",
+      "year": 2022,
+      "ects": 5,
+      "program": "bsc",
+      "code": "",
+      "description": "",
+      "institution": ""
+    },
+    {
+      "title": "Software Engineering 1",
+      "year": 2022,
+      "ects": 5,
+      "program": "bsc",
+      "code": "",
+      "description": "",
+      "institution": ""
+    },
+    {
+      "title": "Project work - Bachelor of Artificial Intelligence and Data",
+      "year": 2022,
+      "ects": 10,
+      "program": "bsc",
+      "code": "",
+      "description": ""
+    },
+    {
+      "title": "Science, Technology and Society",
+      "year": 2023,
+      "ects": 5,
+      "program": "bsc"
+    },
+    {
+      "title": "Physics 1",
+      "year": 2023,
+      "ects": 10,
+      "program": "bsc",
+      "description": "",
+      "institution": ""
+    },
+    {
+      "title": "Computational Social Science",
+      "year": 2023,
+      "ects": 5,
+      "program": "bsc",
+      "code": "",
+      "description": "",
+      "institution": ""
+    },
+    {
+      "title": "Active Machine Learning and Agency",
+      "year": 2023,
+      "ects": 5,
+      "program": "bsc",
+      "code": ""
+    },
+    {
+      "title": "Digital Trends for Entrepreneurs",
+      "year": 2023,
+      "ects": 5,
+      "program": "bsc",
+      "code": "",
+      "description": "",
+      "institution": ""
+    },
+    {
+      "title": "Algorithms and Data Structures 2",
+      "year": 2023,
+      "ects": 5,
+      "program": "bsc"
+    },
+    {
+      "title": "Machine Learning Operations",
+      "year": 2025,
+      "ects": 5,
+      "program": "bsc",
+      "code": "",
+      "description": "",
+      "institution": ""
+    },
+    {
+      "title": "Symbolic Artificial Intelligence",
+      "year": 2025,
+      "ects": 5,
+      "program": "bsc",
+      "code": "",
+      "description": "",
+      "institution": ""
+    },
+    {
+      "title": "Introduction to Reinforcement Learning and Control",
+      "year": 2025,
+      "ects": 5,
+      "program": "bsc",
+      "code": "",
+      "description": "",
+      "institution": ""
+    },
+    {
+      "title": "Project Management",
+      "year": 2025,
+      "ects": 5,
+      "program": "bsc",
+      "code": "",
+      "description": "",
+      "institution": ""
+    },
+    {
+      "title": "Bachelor Thesis: Adaptive Learning Systems for Middle School Mathematics",
+      "year": 2025,
+      "ects": 20,
+      "program": "bsc",
+      "code": "",
+      "description": "",
+      "institution": ""
+    },
+    {
+      "title": "Principle of Economics A",
+      "year": 2024,
+      "ects": 7.5,
+      "program": "other",
+      "code": "",
+      "description": "",
+      "institution": "University of Copenhagen"
+    },
+    {
+      "title": "Descriptive Economics A",
+      "year": 2024,
+      "ects": 7.5,
+      "program": "other",
+      "code": "",
+      "description": "",
+      "institution": "University of Copenhagen"
+    },
+    {
+      "title": "Economics in Society",
+      "year": 2024,
+      "ects": 5,
+      "program": "other",
+      "code": "",
+      "description": "",
+      "institution": "University of Copenhagen"
+    },
+    {
+      "title": "Economics: Mathematics A",
+      "year": 2024,
+      "ects": 10,
+      "program": "other",
+      "code": "",
+      "description": "",
+      "institution": "University of Copenhagen"
+    },
+    {
+      "title": "Principle of Economics B",
+      "year": 2025,
+      "ects": 7.5,
+      "program": "other",
+      "institution": "University of Copenhagen"
+    },
+    {
+      "title": "Descriptive Economics B",
+      "year": 2025,
+      "ects": 7.5,
+      "program": "other",
+      "description": "",
+      "institution": "University of Copenhagen"
+    },
+    {
+      "title": "Business Economics",
+      "year": 2025,
+      "ects": 7.5,
+      "program": "other",
+      "code": "",
+      "description": "",
+      "institution": "University of Copenhagen"
+    },
+    {
+      "title": "Economics: Mathematics B",
+      "year": 2025,
+      "ects": 7.5,
+      "program": "other",
+      "code": "",
+      "description": "",
+      "institution": "University of Copenhagen"
+    },
+    {
+      "title": "Innovation in Engineering",
+      "year": 2026,
+      "ects": 5,
+      "program": "msc",
+      "code": "",
+      "description": "",
+      "institution": ""
+    }
   ]
 }
