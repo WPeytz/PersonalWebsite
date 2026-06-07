@@ -15,7 +15,7 @@ function page({ state, content, heading, detail }) {
   p { margin: 0; color: #a1a1a1; }
   #status { margin-top: 12px; font-size: 12px; color: #6b7280; }
 </style></head>
-<body><div class="card"><h1>${heading}</h1><p>${detail}</p><p id="status"></p></div>
+<body><div class="card"><h1>${heading}</h1><p>${detail}</p><p id="status"></p><p id="diag" style="margin-top:10px;font-size:11px;color:#4b5563;word-break:break-all"></p></div>
 <script>
   (function () {
     var statusEl = document.getElementById('status');
@@ -27,6 +27,13 @@ function page({ state, content, heading, detail }) {
       setStatus('No opener window detected — close this and use "Sign In Using Access Token".');
       return;
     }
+
+    // Diagnostic: report the origins involved.
+    var openerOrigin;
+    try { openerOrigin = window.opener.location.origin; }
+    catch (_) { openerOrigin = 'cross-origin (cannot read)'; }
+    var diag = document.getElementById('diag');
+    diag.textContent = 'popup=' + window.location.origin + '  opener=' + openerOrigin;
 
     var done = false;
     window.addEventListener('message', function (e) {
