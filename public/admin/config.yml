@@ -1,0 +1,104 @@
+backend:
+  name: github
+  repo: WPeytz/PersonalWebsite
+  branch: main
+  # Self-hosted GitHub OAuth handler (Vercel serverless functions in /api).
+  base_url: https://williampeytz.com
+  auth_endpoint: api/auth
+
+# Uploaded images go here and are served from the site root.
+media_folder: public/uploads
+public_folder: /uploads
+
+# Friendlier commit messages for changes made through the CMS.
+site_url: https://williampeytz.com
+display_url: https://williampeytz.com
+
+collections:
+  - name: blog
+    label: Blog posts
+    label_singular: Blog post
+    folder: src/content/blog
+    create: true
+    delete: true
+    extension: md
+    format: frontmatter
+    slug: "{{slug}}"
+    summary: "{{title}}"
+    sortable_fields: [pubDate, title]
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: description, label: Description, widget: string }
+      - { name: pubDate, label: Publish date, widget: datetime, format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
+      - { name: updatedDate, label: Updated date, widget: datetime, required: false, format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
+      - { name: heroImage, label: Hero image, widget: image, required: false }
+      - { name: draft, label: Draft (hide from site), widget: boolean, default: false, required: false }
+      - { name: body, label: Body, widget: markdown }
+
+  - name: projects
+    label: Projects
+    label_singular: Project
+    folder: src/content/projects
+    create: true
+    delete: true
+    extension: md
+    format: frontmatter
+    slug: "{{slug}}"
+    summary: "{{title}}"
+    sortable_fields: [order, year, title]
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: summary, label: Summary (one-line pitch), widget: string }
+      - { name: year, label: Year, widget: number, value_type: int, min: 2000, max: 2100 }
+      - { name: role, label: Role, widget: string }
+      - { name: stack, label: Stack, widget: list, required: false, hint: "e.g. Astro, TypeScript, Firebase" }
+      - { name: link, label: Live link (URL), widget: string, required: false }
+      - { name: repo, label: Repo link (URL), widget: string, required: false }
+      - { name: heroImage, label: Hero image, widget: image, required: false }
+      - { name: order, label: Sort order (lower = first), widget: number, value_type: int, default: 0, required: false }
+      - { name: draft, label: Draft (hide from site), widget: boolean, default: false, required: false }
+      - { name: body, label: Case study, widget: markdown }
+
+  - name: data
+    label: Site data
+    files:
+      - name: courses
+        label: Courses
+        file: src/data/courses.json
+        description: "Your coursework, grouped by programme. Shown on the /courses page."
+        fields:
+          - name: programs
+            label: Programmes
+            widget: object
+            fields:
+              - name: msc
+                label: MSc programme
+                widget: object
+                fields:
+                  - { name: label, label: Label, widget: string }
+                  - { name: sublabel, label: Sublabel, widget: string, required: false }
+              - name: bsc
+                label: BSc programme
+                widget: object
+                fields:
+                  - { name: label, label: Label, widget: string }
+                  - { name: sublabel, label: Sublabel, widget: string, required: false }
+              - name: other
+                label: Other
+                widget: object
+                fields:
+                  - { name: label, label: Label, widget: string }
+                  - { name: sublabel, label: Sublabel, widget: string, required: false }
+          - name: courses
+            label: Courses
+            label_singular: Course
+            widget: list
+            summary: "{{fields.title}} ({{fields.year}})"
+            fields:
+              - { name: title, label: Title, widget: string }
+              - { name: year, label: Year, widget: number, value_type: int, min: 2000, max: 2100 }
+              - { name: ects, label: ECTS, widget: number, value_type: float, required: false }
+              - { name: program, label: Programme, widget: select, options: [msc, bsc, other], default: msc }
+              - { name: code, label: Course code, widget: string, required: false }
+              - { name: description, label: Description, widget: string, required: false }
+              - { name: institution, label: Institution, widget: string, required: false, hint: "Leave blank for DTU" }
