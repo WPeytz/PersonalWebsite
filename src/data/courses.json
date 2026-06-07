@@ -126,7 +126,10 @@
       "title": "Introduction to Intelligent Systems",
       "year": 2020,
       "ects": 10,
-      "program": "bsc"
+      "program": "bsc",
+      "code": "",
+      "description": "",
+      "institution": ""
     },
     {
       "title": "Signals and Data",
@@ -142,25 +145,36 @@
       "year": 2021,
       "ects": 5,
       "program": "bsc",
-      "code": ""
+      "code": "",
+      "description": "",
+      "institution": ""
     },
     {
       "title": "Algorithms and Data Structures 1",
       "year": 2021,
       "ects": 5,
-      "program": "bsc"
+      "program": "bsc",
+      "code": "",
+      "description": "",
+      "institution": ""
     },
     {
       "title": "Introduction to Mathematical Statistics",
       "year": 2021,
       "ects": 5,
-      "program": "bsc"
+      "program": "bsc",
+      "code": "",
+      "description": "",
+      "institution": ""
     },
     {
       "title": "Advanced Engineering Mathematics 2",
       "year": 2021,
       "ects": 5,
-      "program": "bsc"
+      "program": "bsc",
+      "code": "",
+      "description": "",
+      "institution": ""
     },
     {
       "title": "Introductory Programming",
@@ -178,7 +192,10 @@
       "title": "Chemistry",
       "year": 2021,
       "ects": 5,
-      "program": "bsc"
+      "program": "bsc",
+      "code": "",
+      "description": "",
+      "institution": ""
     },
     {
       "title": "UX Design Prototyping",
@@ -213,19 +230,24 @@
       "ects": 10,
       "program": "bsc",
       "code": "",
-      "description": ""
+      "description": "",
+      "institution": ""
     },
     {
       "title": "Science, Technology and Society",
       "year": 2023,
       "ects": 5,
-      "program": "bsc"
+      "program": "bsc",
+      "code": "",
+      "description": "",
+      "institution": ""
     },
     {
       "title": "Physics 1",
       "year": 2023,
       "ects": 10,
       "program": "bsc",
+      "code": "",
       "description": "",
       "institution": ""
     },
@@ -243,7 +265,9 @@
       "year": 2023,
       "ects": 5,
       "program": "bsc",
-      "code": ""
+      "code": "",
+      "description": "",
+      "institution": ""
     },
     {
       "title": "Digital Trends for Entrepreneurs",
@@ -258,7 +282,10 @@
       "title": "Algorithms and Data Structures 2",
       "year": 2023,
       "ects": 5,
-      "program": "bsc"
+      "program": "bsc",
+      "code": "",
+      "description": "",
+      "institution": ""
     },
     {
       "title": "Machine Learning Operations",
@@ -346,6 +373,8 @@
       "year": 2025,
       "ects": 7.5,
       "program": "other",
+      "code": "",
+      "description": "",
       "institution": "University of Copenhagen"
     },
     {
@@ -353,6 +382,7 @@
       "year": 2025,
       "ects": 7.5,
       "program": "other",
+      "code": "",
       "description": "",
       "institution": "University of Copenhagen"
     },
