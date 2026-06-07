@@ -13,6 +13,9 @@
       "project": "anomaly-detection"
     },
     {
+      "project": "oak"
+    },
+    {
       "project": "liferunner"
     },
     {
@@ -35,9 +38,6 @@
     },
     {
       "project": "trading-with-etfs"
-    },
-    {
-      "project": "oak"
     },
     {
       "project": "audio-classification"
