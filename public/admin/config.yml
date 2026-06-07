@@ -57,13 +57,31 @@ collections:
       - { name: link, label: Live link (URL), widget: string, required: false }
       - { name: repo, label: Repo link (URL), widget: string, required: false }
       - { name: heroImage, label: Hero image, widget: image, required: false }
-      - { name: order, label: Sort order (lower = first), widget: number, value_type: int, default: 0, required: false }
+      - { name: order, label: Sort order (fallback), widget: number, value_type: int, default: 0, required: false, hint: "Only used if this project isn't placed on the 'Project order' screen. Normally leave as-is and reorder via Site data → Project order." }
       - { name: draft, label: Draft (hide from site), widget: boolean, default: false, required: false }
       - { name: body, label: Case study, widget: markdown }
 
   - name: data
     label: Site data
     files:
+      - name: project_order
+        label: Project order
+        file: src/data/project-order.json
+        description: "Drag projects to set the order they appear on the home page and /projects. New projects not listed here show up at the end automatically."
+        fields:
+          - name: order
+            label: Project order (drag the handle to reorder)
+            widget: list
+            label_singular: Project
+            summary: "{{fields.project}}"
+            fields:
+              - name: project
+                label: Project
+                widget: relation
+                collection: projects
+                value_field: "{{slug}}"
+                search_fields: [title]
+                display_fields: [title]
       - name: courses
         label: Courses
         file: src/data/courses.json

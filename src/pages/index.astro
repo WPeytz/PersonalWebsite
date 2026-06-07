@@ -4,9 +4,20 @@ import BaseLayout from '@layouts/BaseLayout.astro';
 import ProjectCard from '@components/ProjectCard.astro';
 import PostCard from '@components/PostCard.astro';
 import { ArrowRight } from '@lucide/astro';
+import projectOrder from '@/data/project-order.json';
+
+// Same ordering as /projects — controlled from the CMS "Project order" screen.
+const orderList = projectOrder.order.map((o) => o.project);
+const rank = (slug: string) => {
+  const i = orderList.indexOf(slug);
+  return i === -1 ? Number.MAX_SAFE_INTEGER : i;
+};
 
 const projects = (await getCollection('projects', ({ data }) => !data.draft))
-  .sort((a, b) => (a.data.order ?? 0) - (b.data.order ?? 0))
+  .sort((a, b) => {
+    const diff = rank(a.slug) - rank(b.slug);
+    return diff !== 0 ? diff : (a.data.order ?? 0) - (b.data.order ?? 0);
+  })
   .slice(0, 4);
 
 const posts = (await getCollection('blog', ({ data }) => !data.draft))

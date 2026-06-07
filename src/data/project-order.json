@@ -1,0 +1,21 @@
+{
+  "order": [
+    { "project": "stemma" },
+    { "project": "simbolic" },
+    { "project": "eloquiz" },
+    { "project": "liferunner" },
+    { "project": "minutemind" },
+    { "project": "peytznotes" },
+    { "project": "peytzpvp" },
+    { "project": "startup-social" },
+    { "project": "lastnamelegacy" },
+    { "project": "task-manager" },
+    { "project": "anomaly-detection" },
+    { "project": "trading-with-etfs" },
+    { "project": "audio-classification" },
+    { "project": "car-price-prediction" },
+    { "project": "project-management-system" },
+    { "project": "ai-future-of-surveillance" },
+    { "project": "easylinc" }
+  ]
+}
