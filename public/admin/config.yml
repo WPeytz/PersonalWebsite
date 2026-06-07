@@ -3,7 +3,9 @@ backend:
   repo: WPeytz/PersonalWebsite
   branch: main
   # Self-hosted GitHub OAuth handler (Vercel serverless functions in /api).
-  base_url: https://williampeytz.com
+  # Must be the canonical origin the site actually serves from (www), otherwise
+  # Sveltia's popup origin check fails and login silently aborts.
+  base_url: https://www.williampeytz.com
   auth_endpoint: api/auth
 
 # Uploaded images go here and are served from the site root.
@@ -11,8 +13,8 @@ media_folder: public/uploads
 public_folder: /uploads
 
 # Friendlier commit messages for changes made through the CMS.
-site_url: https://williampeytz.com
-display_url: https://williampeytz.com
+site_url: https://www.williampeytz.com
+display_url: https://www.williampeytz.com
 
 collections:
   - name: blog

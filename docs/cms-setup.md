@@ -1,7 +1,7 @@
 # Editing the site from the browser (`/admin`)
 
 The site uses [Sveltia CMS](https://github.com/sveltia/sveltia-cms) — a
-form-based admin panel. Go to **https://williampeytz.com/admin**, log in with
+form-based admin panel. Go to **https://www.williampeytz.com/admin**, log in with
 GitHub, and edit blog posts, projects, and courses. Saving commits to the
 `main` branch of `WPeytz/PersonalWebsite`, which triggers a Vercel redeploy.
 
@@ -15,8 +15,8 @@ Auth uses a GitHub OAuth App + two serverless functions (`api/auth.js`,
 ### 1. Create a GitHub OAuth App
 - Go to https://github.com/settings/developers → **New OAuth App**
 - **Application name:** `williampeytz.com CMS` (anything)
-- **Homepage URL:** `https://williampeytz.com`
-- **Authorization callback URL:** `https://williampeytz.com/api/callback`
+- **Homepage URL:** `https://www.williampeytz.com`
+- **Authorization callback URL:** `https://www.williampeytz.com/api/callback`
 - Click **Register**, then **Generate a new client secret**
 - Copy the **Client ID** and **Client secret**
 
