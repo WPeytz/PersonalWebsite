@@ -1,6 +1,6 @@
 ---
 title: "Welcome to the new site"
-description: "A quick note on the rebuild — what's here, and what I expect to write about going forward."
+description: "What's here, and what I expect to write about going forward."
 pubDate: 2026-04-25
 ---
 
