@@ -9,7 +9,6 @@ export const NAV_LINKS = [
   { href: '/projects', label: 'Projects' },
   { href: '/blog', label: 'Writing' },
   { href: '/about', label: 'About' },
-  { href: '/resume', label: 'CV' },
   { href: '/courses', label: 'Courses' },
   { href: '/games', label: 'Games' },
   { href: '/contact', label: 'Contact' },

@@ -15,8 +15,8 @@ MSc.
 - **[Projects](/projects)** — case studies of what I'm building now
   (Stemma is the current one) and a selection of earlier work from
   coursework and side projects.
-- **[CV](/resume)** — full resume, both web and PDF.
-- **[About](/about)** — who I am and what I'm currently focused on.
+- **[About](/about)** — who I am, what I'm currently focused on, and my
+  full CV (web and PDF).
 - **Writing** — this section. I'll use it for notes and longer-form
   pieces as they come up.
 

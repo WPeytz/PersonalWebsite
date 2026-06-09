@@ -65,7 +65,6 @@ Search the repo for `TODO` to find every spot that needs your content. Key files
 
 - `src/consts.ts` — site title, description, social links
 - `src/pages/index.astro` — hero copy
-- `src/pages/about.astro` — bio
-- `src/pages/resume.astro` — CV content
+- `src/pages/about.astro` — bio and CV content
 - `public/resume.pdf` — replace with your actual CV
 - `public/og-default.png` — replace with your OG image

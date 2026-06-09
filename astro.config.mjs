@@ -5,6 +5,9 @@ import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
   site: 'https://williampeytz.com',
+  redirects: {
+    '/resume': '/about#cv',
+  },
   integrations: [
     tailwind({ applyBaseStyles: false }),
     mdx(),
