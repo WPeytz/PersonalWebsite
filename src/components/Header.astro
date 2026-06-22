@@ -21,6 +21,8 @@ const isActive = (href: string) =>
         NAV_LINKS.filter((link) => link.href !== '/').map((link) => (
           <a
             href={link.href}
+            target={'external' in link && link.external ? '_blank' : undefined}
+            rel={'external' in link && link.external ? 'noopener noreferrer' : undefined}
             class:list={[
               'px-2 py-1 rounded-md no-underline transition-colors',
               isActive(link.href)

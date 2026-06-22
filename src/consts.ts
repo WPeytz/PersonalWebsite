@@ -8,7 +8,7 @@ export const NAV_LINKS = [
   { href: '/', label: 'Home' },
   { href: '/projects', label: 'Projects' },
   { href: '/blog', label: 'Writing' },
-  { href: '/games', label: 'Games' },
+  { href: 'https://peytzgames.com', label: 'Games', external: true },
   { href: '/courses', label: 'Courses' },
   { href: '/about', label: 'About' },
   { href: '/contact', label: 'Contact' },

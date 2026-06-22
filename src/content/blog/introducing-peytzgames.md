@@ -18,7 +18,7 @@ balance, real-time rendering, or getting an LLM to grade answers fairly.
 
 ## What's in the collection so far
 
-- **[Blocks](/games/blocks)** — an original falling-block puzzle you can
+- **[Blocks](https://peytzgames.com/play/blocks)** — an original falling-block puzzle you can
   play right in the browser. Click the board, use the arrow keys, and
   see how long you survive.
 - **[LifeRunner.io](/projects/liferunner)** — a strategy-based life
@@ -45,7 +45,7 @@ This is an ongoing collection, not a finished one. I have more game
 ideas queued up than time to build them, which is exactly how I like it.
 New games will be released on
 [PeytzGames.com](https://peytzgames.com) as they're ready, and you can
-always find them from the [games page](/games) here too.
+always find them on [PeytzGames.com](https://peytzgames.com).
 
 If you try any of them, I'd love to hear what you think — the fastest
 way to reach me is by [email](mailto:williamhkp@gmail.com).
