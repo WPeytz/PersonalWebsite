@@ -10,7 +10,7 @@
     },
     "other": {
       "label": "Other",
-      "sublabel": "Economics"
+      "sublabel": "Economics & Marketing · UCPH · Leeds"
     }
   },
   "courses": [
@@ -412,6 +412,24 @@
       "code": "",
       "description": "",
       "institution": ""
+    },
+    {
+      "title": "Global and Digital Services Marketing",
+      "year": 2026,
+      "ects": 5,
+      "program": "other",
+      "code": "",
+      "description": "",
+      "institution": "University of Leeds"
+    },
+    {
+      "title": "AI Powered Marketing Analytics",
+      "year": 2026,
+      "ects": 5,
+      "program": "other",
+      "code": "",
+      "description": "",
+      "institution": "University of Leeds"
     }
   ]
 }
