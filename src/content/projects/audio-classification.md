@@ -1,8 +1,8 @@
 ---
 title: "Instrument Audio Classification"
 summary: "CNN and LSTM models for classifying 15 musical instruments from short audio clips, reaching 96–98% accuracy after tuning."
-year: 2024
-role: "Deep learning coursework"
+year: 2021
+role: "Introduction to Intelligent Systems"
 stack: ["PyTorch", "CNN", "LSTM", "Librosa"]
 order: 13
 ---
