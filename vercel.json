@@ -1,0 +1,44 @@
+{
+  "rewrites": [
+    {
+      "source": "/ai-data-map",
+      "destination": "https://ai-data-map-ruby.vercel.app/"
+    },
+    {
+      "source": "/ai-data-map/",
+      "destination": "https://ai-data-map-ruby.vercel.app/"
+    },
+    {
+      "source": "/ai-data-map/browse/",
+      "destination": "https://ai-data-map-ruby.vercel.app/browse"
+    },
+    {
+      "source": "/ai-data-map/concepts/:slug/",
+      "destination": "https://ai-data-map-ruby.vercel.app/concepts/:slug"
+    },
+    {
+      "source": "/ai-data-map/goals/concept/:slug/",
+      "destination": "https://ai-data-map-ruby.vercel.app/goals/concept/:slug"
+    },
+    {
+      "source": "/ai-data-map/goals/:slug/",
+      "destination": "https://ai-data-map-ruby.vercel.app/goals/:slug"
+    },
+    {
+      "source": "/ai-data-map/route/concept/:slug/",
+      "destination": "https://ai-data-map-ruby.vercel.app/route/concept/:slug"
+    },
+    {
+      "source": "/ai-data-map/route/:slug/",
+      "destination": "https://ai-data-map-ruby.vercel.app/route/:slug"
+    },
+    {
+      "source": "/ai-data-map/route/",
+      "destination": "https://ai-data-map-ruby.vercel.app/route"
+    },
+    {
+      "source": "/ai-data-map/:path*",
+      "destination": "https://ai-data-map-ruby.vercel.app/:path*"
+    }
+  ]
+}
