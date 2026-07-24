@@ -1,39 +1,36 @@
 ---
 title: "Stemma"
-summary: "A Danish-speaking AI phone assistant that handles inbound calls (scheduling, bookings, and sales) for businesses that miss calls when no one can pick up."
+summary: "A Danish-speaking AI phone assistant that handled inbound business calls using a real-time voice AI pipeline."
 year: 2026
-role: "Cofounder · AI engineer"
-stack: ["Python", "ASR", "LLMs", "TTS", "Telephony APIs"]
+role: "Co-founder · AI Engineer"
+stack: ["Python", "FastAPI", "LLMs", "ASR", "TTS", "Twilio"]
 order: 1
 ---
 
 ## Overview
 
-Stemma is a Danish-speaking AI phone assistant for inbound calls. The
-problem we keep seeing in small and mid-sized Danish businesses is the
-same: calls come in outside opening hours, during busy periods, or when
-the person who *can* answer is already on another line, and those calls
-turn into lost bookings. Stemma picks up, speaks Danish, and handles the
-conversation end to end: scheduling appointments, taking bookings, and
-closing simple sales.
+Stemma was a Danish-speaking AI phone assistant designed to answer inbound calls for businesses that couldn't always pick up the phone. The goal was to handle common customer interactions—such as answering questions, taking bookings, and scheduling appointments—using natural voice conversations.
+
+Over several months, we built a working prototype, spoke with potential customers, and secured a pilot customer before ultimately deciding not to continue the company. Although the project ended, it gave me valuable experience building and validating a real-world AI product from scratch.
 
 ## What I built
 
-- **Real-time voice pipeline.** ASR → LLM → TTS, tuned for Danish and for
-  the latency budget of a live phone conversation. Most of the engineering
-  work is the seams between those stages, not the stages themselves.
-- **Telephony integration.** Wired the pipeline up to telephony APIs and
-  the backend systems that actually take a booking on the other side, so
-  the assistant doesn't just *promise* an outcome. It makes it happen.
-- **Pilot deployments.** We're running with real customers, measuring
-  missed-call conversion against their previous baseline. That feedback
-  loop, what the assistant does well and where it fumbles, is what we
-  ship against every week.
+- **Real-time voice AI pipeline.** Designed and implemented an end-to-end pipeline that connected speech-to-text, an LLM, and text-to-speech to enable natural phone conversations in Danish.
+- **Backend & telephony integration.** Built the backend services in Python/FastAPI and integrated the system with Twilio to handle real-time phone calls and conversation state.
+- **Conversation orchestration.** Developed the application logic that managed prompts, conversation flow, and interactions between the different AI services while keeping latency low enough for live conversations.
+- **Rapid product iteration.** Worked closely with potential customers to understand their workflows, translate feedback into product improvements, and continuously refine the prototype.
 
-## What I'm learning
+## What I learned
 
-The interesting problem is rarely the model itself; it's the failure
-modes around the edges. A voice agent that's "right" 95% of the time
-still loses customer trust on the 5% if those failures aren't graceful.
-Most of my time goes into making the system *fail visibly* rather than
-*fail confidently*.
+Stemma reinforced that building AI products is about much more than choosing the right model. The real engineering challenges lie in connecting multiple systems into a reliable user experience—handling latency, edge cases, and failure modes while keeping interactions natural.
+
+It also taught me that building a successful startup requires both product-market fit and founder-market fit. While we saw encouraging customer interest, we ultimately decided that this wasn't the opportunity we wanted to dedicate the coming years to pursuing.
+
+## My responsibilities
+
+- AI systems architecture
+- Backend engineering
+- Voice AI integration (ASR, LLMs, TTS)
+- Cloud deployment
+- Customer discovery
+- Product strategy
