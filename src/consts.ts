@@ -7,9 +7,9 @@ export const AUTHOR = 'William Peytz';
 export const NAV_LINKS = [
   { href: '/', label: 'Home' },
   { href: '/projects', label: 'Projects' },
+  { href: '/courses', label: 'Courses' },
   { href: '/blog', label: 'Writing' },
   { href: 'https://peytzgames.com', label: 'Games', external: true },
-  { href: '/courses', label: 'Courses' },
   { href: '/about', label: 'About' },
   { href: '/contact', label: 'Contact' },
 ] as const;
