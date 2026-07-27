@@ -1,10 +1,10 @@
 {
   "order": [
     {
-      "project": "agentarena"
+      "project": "stemma"
     },
     {
-      "project": "stemma"
+      "project": "agentarena"
     },
     {
       "project": "eloquiz"
