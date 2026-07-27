@@ -1,6 +1,14 @@
 {
   "rewrites": [
     {
+      "source": "/agentarena",
+      "destination": "https://agentarena-benchmark.wpeytz.chatgpt.site/agentarena"
+    },
+    {
+      "source": "/agentarena/:path*",
+      "destination": "https://agentarena-benchmark.wpeytz.chatgpt.site/agentarena/:path*"
+    },
+    {
       "source": "/ai-data-map",
       "destination": "https://ai-data-map-ruby.vercel.app/"
     },
