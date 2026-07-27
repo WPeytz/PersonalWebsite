@@ -7,13 +7,13 @@
       "project": "stemma"
     },
     {
-      "project": "simbolic"
-    },
-    {
       "project": "eloquiz"
     },
     {
       "project": "peytzgames"
+    },
+    {
+      "project": "simbolic"
     },
     {
       "project": "anomaly-detection"
