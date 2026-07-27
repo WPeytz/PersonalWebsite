@@ -1,7 +1,7 @@
 export const SITE_TITLE = 'William Peytz';
 export const SITE_DESCRIPTION =
   'AI engineer and startup builder. MSc Human-Centered AI student at DTU. Projects, writing, and CV.';
-export const SITE_URL = 'https://williampeytz.com';
+export const SITE_URL = 'https://www.williampeytz.com';
 export const AUTHOR = 'William Peytz';
 
 export const NAV_LINKS = [

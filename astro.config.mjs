@@ -4,13 +4,15 @@ import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: 'https://williampeytz.com',
+  site: 'https://www.williampeytz.com',
   redirects: {
     '/resume': '/about#cv',
   },
   integrations: [
     tailwind({ applyBaseStyles: false }),
     mdx(),
-    sitemap(),
+    sitemap({
+      customPages: ['https://www.williampeytz.com/agentarena/'],
+    }),
   ],
 });

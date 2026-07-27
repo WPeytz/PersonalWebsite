@@ -1,0 +1,13 @@
+# William Peytz
+
+Portfolio of William Peytz, an AI engineer and startup builder.
+
+## Featured application
+
+- [AgentArena](https://www.williampeytz.com/agentarena/): Watch and compare AI coding agents solving the same software-engineering task in a side-by-side replay.
+
+## Main sections
+
+- [Projects](https://www.williampeytz.com/projects/)
+- [Writing](https://www.williampeytz.com/blog/)
+- [About](https://www.williampeytz.com/about/)
