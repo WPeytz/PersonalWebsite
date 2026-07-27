@@ -5,6 +5,10 @@
       "destination": "https://agentarena-benchmark.wpeytz.chatgpt.site/agentarena"
     },
     {
+      "source": "/agentarena/assets/:path*",
+      "destination": "https://agentarena-benchmark.wpeytz.chatgpt.site/assets/:path*"
+    },
+    {
       "source": "/agentarena/:path*",
       "destination": "https://agentarena-benchmark.wpeytz.chatgpt.site/agentarena/:path*"
     },
