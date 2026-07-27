@@ -1,6 +1,9 @@
 {
   "order": [
     {
+      "project": "agentarena"
+    },
+    {
       "project": "stemma"
     },
     {
