@@ -4,13 +4,16 @@
       "project": "stemma"
     },
     {
-      "project": "agentarena"
+      "project": "peytznotes"
     },
     {
       "project": "eloquiz"
     },
     {
       "project": "peytzgames"
+    },
+    {
+      "project": "agentarena"
     },
     {
       "project": "simbolic"
@@ -26,9 +29,6 @@
     },
     {
       "project": "minutemind"
-    },
-    {
-      "project": "peytznotes"
     },
     {
       "project": "peytzpvp"
