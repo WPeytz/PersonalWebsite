@@ -5,6 +5,7 @@ year: 2026
 role: "Solo build · games hub"
 stack: ["Astro", "Tailwind", "TypeScript", "Vercel"]
 link: "https://peytzgames.com"
+linkLabel: "Visit PeytzGames.com"
 order: 18
 ---
 

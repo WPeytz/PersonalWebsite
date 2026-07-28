@@ -5,6 +5,7 @@ year: 2025
 role: "BSc thesis · full-stack · ML"
 stack: ["Vue", "Flask", "Firebase", "OpenAI API"]
 link: "https://eloquiz.dk"
+linkLabel: "Visit EloQuiz.dk"
 order: 3
 ---
 
