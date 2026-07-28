@@ -4,6 +4,8 @@ summary: "An AI study assistant that turns five years of university notes into a
 year: 2026
 role: "Solo build · full-stack & AI"
 stack: ["Next.js", "FastAPI", "pgvector", "Supabase", "OpenAI", "Docker"]
+link: "https://www.peytznotes.dk/"
+linkLabel: "Visit PeytzNotes.dk"
 order: 6
 ---
 

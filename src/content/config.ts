@@ -21,6 +21,7 @@ const projects = defineCollection({
     role: z.string(),
     stack: z.array(z.string()).default([]),
     link: z.string().url().optional(),
+    linkLabel: z.string().optional(),
     repo: z.string().url().optional(),
     heroImage: z.string().optional(),
     order: z.number().default(0),
