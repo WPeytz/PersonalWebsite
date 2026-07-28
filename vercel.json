@@ -1,6 +1,18 @@
 {
   "rewrites": [
     {
+      "source": "/UniversityAdmissions2026",
+      "destination": "https://danish-university-admissions-2026.wpeytz.chatgpt.site/UniversityAdmissions2026"
+    },
+    {
+      "source": "/UniversityAdmissions2026/",
+      "destination": "https://danish-university-admissions-2026.wpeytz.chatgpt.site/UniversityAdmissions2026"
+    },
+    {
+      "source": "/UniversityAdmissions2026/:path*",
+      "destination": "https://danish-university-admissions-2026.wpeytz.chatgpt.site/UniversityAdmissions2026/:path*"
+    },
+    {
       "source": "/agentarena",
       "destination": "https://agentarena-benchmark.wpeytz.chatgpt.site/agentarena"
     },
