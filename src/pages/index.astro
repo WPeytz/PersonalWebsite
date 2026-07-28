@@ -22,20 +22,18 @@ const projects = [...allProjects]
   })
   .slice(0, 4);
 
-const newestProjects = [...allProjects]
-  .sort((a, b) => {
-    const yearDiff = b.data.year - a.data.year;
-    if (yearDiff !== 0) return yearDiff;
-
-    const aRank = rank(a.slug);
-    const bRank = rank(b.slug);
-    const aIsUnranked = aRank === Number.MAX_SAFE_INTEGER;
-    const bIsUnranked = bRank === Number.MAX_SAFE_INTEGER;
-
-    if (aIsUnranked !== bIsUnranked) return aIsUnranked ? -1 : 1;
-    return aRank - bRank;
-  })
-  .slice(0, 4);
+const newestProjectSlugs = [
+  'danish-university-admissions-2026',
+  'agentarena',
+  'oak',
+  'anomaly-detection',
+];
+const newestProjects = allProjects
+  .filter((project) => newestProjectSlugs.includes(project.slug))
+  .sort(
+    (a, b) =>
+      newestProjectSlugs.indexOf(a.slug) - newestProjectSlugs.indexOf(b.slug),
+  );
 
 const posts = (await getCollection('blog', ({ data }) => !data.draft))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
