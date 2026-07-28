@@ -13,10 +13,19 @@ const rank = (slug: string) => {
   return i === -1 ? Number.MAX_SAFE_INTEGER : i;
 };
 
-const projects = (await getCollection('projects', ({ data }) => !data.draft))
+const allProjects = await getCollection('projects', ({ data }) => !data.draft);
+
+const projects = [...allProjects]
   .sort((a, b) => {
     const diff = rank(a.slug) - rank(b.slug);
     return diff !== 0 ? diff : (a.data.order ?? 0) - (b.data.order ?? 0);
+  })
+  .slice(0, 4);
+
+const newestProjects = [...allProjects]
+  .sort((a, b) => {
+    const yearDiff = b.data.year - a.data.year;
+    return yearDiff !== 0 ? yearDiff : rank(a.slug) - rank(b.slug);
   })
   .slice(0, 4);
 
@@ -64,6 +73,25 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
         </div>
         <div class="grid gap-4 sm:grid-cols-2">
           {projects.map((project) => <ProjectCard project={project} />)}
+        </div>
+      </section>
+    )
+  }
+
+  {
+    newestProjects.length > 0 && (
+      <section class="container-wide py-12 border-t border-border">
+        <div class="flex items-baseline justify-between gap-4 mb-8">
+          <h2 class="text-xl font-semibold tracking-tightest">Newest projects</h2>
+          <a
+            href="/projects"
+            class="text-sm text-fg-muted hover:text-fg inline-flex items-center gap-1 no-underline"
+          >
+            All projects <ArrowRight class="h-3.5 w-3.5" aria-hidden="true" />
+          </a>
+        </div>
+        <div class="grid gap-4 sm:grid-cols-2">
+          {newestProjects.map((project) => <ProjectCard project={project} />)}
         </div>
       </section>
     )
