@@ -9,6 +9,14 @@
       "destination": "https://danish-university-admissions-2026.wpeytz.chatgpt.site/UniversityAdmissions2026"
     },
     {
+      "source": "/UniversityAdmissions2026/assets/:path*",
+      "destination": "https://danish-university-admissions-2026.wpeytz.chatgpt.site/assets/:path*"
+    },
+    {
+      "source": "/assets/_vinext_fonts/:path*",
+      "destination": "https://danish-university-admissions-2026.wpeytz.chatgpt.site/assets/_vinext_fonts/:path*"
+    },
+    {
       "source": "/UniversityAdmissions2026/:path*",
       "destination": "https://danish-university-admissions-2026.wpeytz.chatgpt.site/UniversityAdmissions2026/:path*"
     },
