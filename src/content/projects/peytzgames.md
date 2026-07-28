@@ -1,5 +1,5 @@
 ---
-title: "PeytzGames"
+title: "PeytzGames.com"
 summary: "A home for the games I make — a games hub at peytzgames.com where new games are released, with embedded browser play pages and a data-driven catalog."
 year: 2026
 role: "Solo build · games hub"
