@@ -12,5 +12,5 @@ platforms, voice agents, anomaly detection pipelines.
 
 ## Currently
 
-- Studying at DTU — Taking a course on Innovation in Engineering
+- On summer break from DTU
 - Looking for my next opportunity in AI-engineering and startups
