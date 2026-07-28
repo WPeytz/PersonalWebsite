@@ -25,7 +25,15 @@ const projects = [...allProjects]
 const newestProjects = [...allProjects]
   .sort((a, b) => {
     const yearDiff = b.data.year - a.data.year;
-    return yearDiff !== 0 ? yearDiff : rank(a.slug) - rank(b.slug);
+    if (yearDiff !== 0) return yearDiff;
+
+    const aRank = rank(a.slug);
+    const bRank = rank(b.slug);
+    const aIsUnranked = aRank === Number.MAX_SAFE_INTEGER;
+    const bIsUnranked = bRank === Number.MAX_SAFE_INTEGER;
+
+    if (aIsUnranked !== bIsUnranked) return aIsUnranked ? -1 : 1;
+    return aRank - bRank;
   })
   .slice(0, 4);
 
