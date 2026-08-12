@@ -4,6 +4,10 @@ summary: "Zero- and few-shot defect detection on the MVTec dataset using frozen 
 year: 2026
 role: "Computer Vision coursework"
 stack: ["PyTorch", "DINOv3", "MVTec AD"]
+paper: "https://www.williampeytz.com/dinov3-anomaly-detection-paper.pdf"
+paperLabel: "Read paper"
+repo: "https://github.com/WPeytz/AnomalyDetection"
+repoLabel: "View source"
 order: 11
 ---
 
