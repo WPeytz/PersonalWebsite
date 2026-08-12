@@ -4,8 +4,10 @@ summary: "A from-scratch 50.8M-parameter GPT language model built in PyTorch for
 year: 2026
 role: "Machine learning engineer"
 stack: ["Python", "PyTorch", "Transformers", "CUDA"]
-link: "https://github.com/WPeytz/gpt-50m-pytorch"
-linkLabel: "View source"
+link: "https://www.williampeytz.com/gpt-50m-pytorch-paper.pdf"
+linkLabel: "Read paper"
+repo: "https://github.com/WPeytz/gpt-50m-pytorch"
+repoLabel: "View source"
 order: 0
 draft: false
 ---

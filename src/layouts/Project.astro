@@ -9,7 +9,7 @@ interface Props {
 }
 
 const { entry } = Astro.props;
-const { title, summary, year, role, stack, link, linkLabel, repo, heroImage } = entry.data;
+const { title, summary, year, role, stack, link, linkLabel, repo, repoLabel, heroImage } = entry.data;
 const editHref = editUrl(`src/content/projects/${entry.id}`);
 ---
 
@@ -56,10 +56,15 @@ const editHref = editUrl(`src/content/projects/${entry.id}`);
                 href={repo}
                 target="_blank"
                 rel="noopener noreferrer"
-                class="inline-flex items-center gap-1.5 text-sm text-fg hover:text-accent no-underline"
+                class:list={[
+                  'inline-flex items-center gap-1.5 text-sm no-underline',
+                  repoLabel
+                    ? 'rounded-md border border-border-strong px-4 py-2.5 font-medium text-fg hover:bg-bg-elevated'
+                    : 'text-fg hover:text-accent',
+                ]}
               >
                 <Code2 class="h-4 w-4" aria-hidden="true" />
-                Source
+                {repoLabel ?? 'Source'}
               </a>
             )}
           </div>

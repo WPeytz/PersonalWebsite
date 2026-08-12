@@ -56,6 +56,7 @@ collections:
       - { name: stack, label: Stack, widget: list, required: false, hint: "e.g. Astro, TypeScript, Firebase" }
       - { name: link, label: Live link (URL), widget: string, required: false }
       - { name: repo, label: Repo link (URL), widget: string, required: false }
+      - { name: repoLabel, label: Repo button label, widget: string, required: false }
       - { name: heroImage, label: Hero image, widget: image, required: false }
       - { name: order, label: Sort order (fallback), widget: number, value_type: int, default: 0, required: false, hint: "Only used if this project isn't placed on the 'Project order' screen. Normally leave as-is and reorder via Site data → Project order." }
       - { name: draft, label: Draft (hide from site), widget: boolean, default: false, required: false }
