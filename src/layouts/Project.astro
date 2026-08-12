@@ -1,7 +1,7 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import BaseLayout from './BaseLayout.astro';
-import { ArrowUpRight, Code2, Pencil } from '@lucide/astro';
+import { ArrowUpRight, Code2, FileText, Pencil } from '@lucide/astro';
 import { editUrl } from '@/consts';
 
 interface Props {
@@ -9,7 +9,7 @@ interface Props {
 }
 
 const { entry } = Astro.props;
-const { title, summary, year, role, stack, link, linkLabel, repo, repoLabel, heroImage } = entry.data;
+const { title, summary, year, role, stack, link, linkLabel, repo, repoLabel, paper, paperLabel, heroImage } = entry.data;
 const editHref = editUrl(`src/content/projects/${entry.id}`);
 ---
 
@@ -33,7 +33,7 @@ const editHref = editUrl(`src/content/projects/${entry.id}`);
       }
 
       {
-        (link || repo) && (
+        (link || repo || paper) && (
           <div class="mt-6 flex flex-wrap gap-3">
             {link && (
               <a
@@ -65,6 +65,17 @@ const editHref = editUrl(`src/content/projects/${entry.id}`);
               >
                 <Code2 class="h-4 w-4" aria-hidden="true" />
                 {repoLabel ?? 'Source'}
+              </a>
+            )}
+            {paper && (
+              <a
+                href={paper}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-1.5 rounded-md border border-border-strong px-4 py-2.5 text-sm font-medium text-fg hover:bg-bg-elevated no-underline"
+              >
+                <FileText class="h-4 w-4" aria-hidden="true" />
+                {paperLabel ?? 'Read paper'}
               </a>
             )}
           </div>

@@ -6,6 +6,8 @@ role: "BSc thesis · full-stack · ML"
 stack: ["Vue", "Flask", "Firebase", "OpenAI API"]
 link: "https://eloquiz.dk"
 linkLabel: "Visit EloQuiz.dk"
+paper: "https://www.williampeytz.com/eloquiz-adaptive-learning-systems-paper.pdf"
+paperLabel: "Read paper"
 order: 3
 ---
 
