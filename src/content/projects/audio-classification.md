@@ -4,6 +4,8 @@ summary: "CNN and LSTM models for classifying 15 musical instruments from short 
 year: 2021
 role: "Introduction to Intelligent Systems"
 stack: ["PyTorch", "CNN", "LSTM", "Librosa"]
+paper: "https://www.williampeytz.com/instrument-audio-classification-paper.pdf"
+paperLabel: "Read paper"
 order: 13
 ---
 
