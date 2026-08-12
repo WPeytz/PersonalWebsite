@@ -4,7 +4,7 @@ summary: "Adaptive math learning platform that uses an Elo-based difficulty syst
 year: 2025
 role: "BSc thesis · full-stack · ML"
 stack: ["Vue", "Flask", "Firebase", "OpenAI API"]
-link: "https://eloquiz.dk"
+link: "https://eloquiz.dk/signup"
 linkLabel: "Visit EloQuiz.dk"
 paper: "https://www.williampeytz.com/eloquiz-adaptive-learning-systems-paper.pdf"
 paperLabel: "Read paper"
