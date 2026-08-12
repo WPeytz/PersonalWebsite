@@ -1,7 +1,7 @@
 ---
 title: "Industrial Anomaly Detection with DINOv3"
 summary: "Zero- and few-shot defect detection on the MVTec dataset using frozen DINOv3 features, embedding similarity, and patch-level localization."
-year: 2026
+year: 2025
 role: "Computer Vision coursework"
 stack: ["PyTorch", "DINOv3", "MVTec AD"]
 paper: "https://www.williampeytz.com/dinov3-anomaly-detection-paper.pdf"
