@@ -1,6 +1,9 @@
 {
   "order": [
     {
+      "project": "peytzgames"
+    },
+    {
       "project": "stemma"
     },
     {
@@ -8,9 +11,6 @@
     },
     {
       "project": "eloquiz"
-    },
-    {
-      "project": "peytzgames"
     },
     {
       "project": "agentarena"
