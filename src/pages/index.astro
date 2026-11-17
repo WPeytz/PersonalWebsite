@@ -63,6 +63,26 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
     </div>
   </section>
 
+  <section class="container-wide py-12 border-t border-border" aria-labelledby="video-cv-title">
+    <div class="mb-5 flex items-baseline justify-between gap-4">
+      <h2 id="video-cv-title" class="text-xl font-semibold tracking-tightest">Video CV</h2>
+      <span class="text-sm text-fg-muted">1 min 34 sec</span>
+    </div>
+    <video
+      class="block w-full aspect-video rounded-lg border border-border-strong bg-black"
+      width="1280"
+      height="720"
+      controls
+      playsinline
+      preload="none"
+      poster="/media/william-peytz-video-cv-poster.webp"
+      aria-labelledby="video-cv-title"
+    >
+      <source src="/media/william-peytz-video-cv.mp4" type="video/mp4" />
+      <a href="/media/william-peytz-video-cv.mp4">Download William Peytz's video CV</a>
+    </video>
+  </section>
+
   {
     projects.length > 0 && (
       <section class="container-wide py-12 border-t border-border">
